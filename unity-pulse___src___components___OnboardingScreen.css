@@ -1,0 +1,180 @@
+.onboarding {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(16, 24, 32, 0.42), rgba(16, 24, 32, 0.42)),
+    url('/images/game-background.png') center center / cover no-repeat fixed;
+  padding: 72px 18px 36px;
+  font-family: 'Golos Text', sans-serif;
+}
+
+.onboarding::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(16, 24, 32, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 24, 32, 0.08) 1px, transparent 1px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+
+.onboarding__language {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+}
+
+.onboarding__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 760px);
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.onboarding__preview,
+.onboarding__content {
+  background: #ffffff;
+  border: 3px solid #20313f;
+  border-radius: 8px;
+  box-shadow: 0 7px 0 #20313f;
+}
+
+.onboarding__preview {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 18px;
+  padding: 22px;
+  min-height: 330px;
+}
+
+.onboarding__skin {
+  width: 116px;
+  height: 148px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 8px 0 #20313f);
+}
+
+.onboarding__nameplate {
+  min-width: 160px;
+  max-width: 100%;
+  background: #f3d779;
+  border: 3px solid #20313f;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #101820;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.onboarding__content {
+  padding: 24px;
+}
+
+.onboarding__title {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: #20313f;
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.onboarding__subtitle {
+  color: #31404a;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.onboarding__field,
+.onboarding__gender-group {
+  display: grid;
+  gap: 8px;
+  color: #20313f;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.onboarding__field span,
+.onboarding__gender-group > span {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 18px;
+}
+
+.onboarding__field input {
+  width: 100%;
+  border: 3px solid #20313f;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font: inherit;
+  color: #20313f;
+  background: #fffdf2;
+}
+
+.onboarding__gender-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.onboarding__gender,
+.onboarding__submit {
+  border: 3px solid #20313f;
+  border-radius: 8px;
+  box-shadow: 0 5px 0 #20313f;
+  cursor: pointer;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #101820;
+  padding: 12px;
+}
+
+.onboarding__gender {
+  background: #ffffff;
+}
+
+.onboarding__gender--active {
+  background: #5bb4ff;
+}
+
+.onboarding__submit {
+  width: 100%;
+  background: #35d08b;
+}
+
+.onboarding__submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.onboarding__gender:active,
+.onboarding__submit:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #20313f;
+}
+
+@media (max-width: 720px) {
+  .onboarding__panel {
+    grid-template-columns: 1fr;
+  }
+
+  .onboarding__preview {
+    min-height: 220px;
+  }
+
+  .onboarding__skin {
+    width: 86px;
+    height: 112px;
+  }
+}

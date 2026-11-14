@@ -1,0 +1,50 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: #101820;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #20313f;
+  border-radius: 8px;
+  background: #f3d779;
+  color: #101820;
+  padding: 8px 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #20313f;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.language-toggle:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #20313f;
+}
+
+.language-toggle strong {
+  min-width: 24px;
+  color: #e24b4a;
+}
